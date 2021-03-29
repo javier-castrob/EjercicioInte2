@@ -1,0 +1,23 @@
+<mvc:View controllerName="EjercicioInte2.EjercicioInte2.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+    <Page id="page" title="{i18n>titleMaster} ({toolsModel>/cantidad})">
+        <subHeader>
+            <OverflowToolbar>
+                <SearchField liveChange="onSearch" width="100%" />
+            </OverflowToolbar>
+        </subHeader>
+        <content>
+            <List id="idListaProductos" 
+                    items="{Productos>/value}"
+                    mode="SingleSelectMaster"
+                    selectionChange="onSelectionChange">
+                <items>
+                    <StandardListItem title="{Productos>ProductName}" 
+                        type="Active"
+                        press="onSelectionChange"
+                        info="${Productos>UnitPrice} {i18n>moneda}"
+                        />
+                </items>
+		    </List>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,84 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form">
+    <Panel >
+        <f:Form>
+			<f:layout>
+				<f:ResponsiveGridLayout
+					labelSpanXL="4"
+					labelSpanL="4"
+					labelSpanM="12"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="3"
+					emptySpanL="3"
+					emptySpanM="0"
+					emptySpanS="0"
+					columnsXL="2"
+					columnsL="2"
+					columnsM="2"
+					singleContainerFullSize="false" />
+			</f:layout>
+			<f:formContainers>
+                <f:FormContainer>
+                    <f:formElements>
+						<f:FormElement label="{i18n>proveedor}">
+							<f:fields>
+								<Text text="{Proveedor>/CompanyName}"/>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="{i18n>nombre}">
+							<f:fields>
+								<Text text="{Proveedor>/ContactName}"/>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="{i18n>cargo}">
+							<f:fields>
+								<Text text="{Proveedor>/ContactTitle}"/>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="{i18n>direccion}">
+							<f:fields>
+								<Text text="{Proveedor>/Address}"/>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="{i18n>ciudad}">
+							<f:fields>
+								<Text text="{Proveedor>/City}"/>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="{i18n>region}">
+							<f:fields>
+								<Text text="{path: 'Proveedor>/Region',  formatter: '.Formatter.formatRegion'}"/>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="{i18n>codPostal}">
+							<f:fields>
+								<Text text="{Proveedor>/PostalCode}"/>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="{i18n>pais}">
+							<f:fields>
+								<Text text="{Proveedor>/Country}"/>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="{i18n>telefono}">
+							<f:fields>
+								<Text text="{Proveedor>/Phone}"/>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="{i18n>fax}">
+							<f:fields>
+								<Text text="{path: 'Proveedor>/Fax',  formatter: '.Formatter.formatFax'}"/>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="{i18n>web}">
+							<f:fields>
+								<Text text="{path: 'Proveedor>/HomePage',  formatter: '.Formatter.formatWeb'}"/>
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+                </f:FormContainer>
+			</f:formContainers>
+		</f:Form>
+    </Panel>
+</core:FragmentDefinition>

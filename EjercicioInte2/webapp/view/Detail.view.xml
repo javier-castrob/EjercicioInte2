@@ -1,0 +1,43 @@
+<mvc:View controllerName="EjercicioInte2.EjercicioInte2.controller.Detail" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+    <Page id="page" title="{i18n>titleDetail}">
+        <content>
+            <ObjectHeader
+				title="{toolsModel>/producSelect/ProductName}"
+				number="{
+					parts:[{path:'toolsModel>/producSelect/UnitPrice'},{path:'i18n>moneda'}],
+					type: 'sap.ui.model.type.Currency',
+					formatOptions: {showMeasure: true}
+				}">
+				<attributes>
+					<ObjectAttribute title="{i18n>categoria}" text="{Categoria>/CategoryName} - {Categoria>/Description}" />
+					<ObjectAttribute title="{i18n>proveedor}" text="{Proveedor>/CompanyName}" />
+				</attributes>
+				<statuses>
+					<ObjectStatus title="{i18n>estado}" 
+                            text="{path:'toolsModel>/producSelect/UnitsInStock', formatter: '.Formatter.formatStateText'}" 
+                            state="{path:'toolsModel>/producSelect/UnitsInStock', formatter: '.Formatter.formatState'}" />
+				</statuses>
+			</ObjectHeader>
+            <IconTabBar>
+                <items>
+                    <IconTabFilter text="{i18n>general}">
+                        <core:Fragment fragmentName="EjercicioInte2.EjercicioInte2.fragments.general" type="XML" id="idFragmentGeneral"/>
+                    </IconTabFilter>
+                    <IconTabFilter text="{i18n>proveedor}">
+                        <core:Fragment fragmentName="EjercicioInte2.EjercicioInte2.fragments.proveedor" type="XML" id="idFragmentProveedor"/>
+                    </IconTabFilter>
+                </items>
+            </IconTabBar>
+        </content>
+        <footer>
+			<OverflowToolbar>
+				<content>
+					<ToolbarSpacer />
+					<Button text="{i18n>editar}" press="editar"/>
+					<Button text="{i18n>borrar}" press="borrar"/>
+                    <Button text="{i18n>copiarButton}" press="copiar"/>
+				</content>
+			</OverflowToolbar>
+		</footer>
+    </Page>
+</mvc:View>

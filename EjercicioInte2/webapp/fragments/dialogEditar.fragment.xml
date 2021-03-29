@@ -1,0 +1,64 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form">
+    <Dialog id="idDialogEditar" title="{i18n>titleDialog}">
+        <Panel>
+            <f:Form>
+                <f:layout>
+                    <f:ResponsiveGridLayout
+                        labelSpanXL="4"
+                        labelSpanL="4"
+                        labelSpanM="12"
+                        labelSpanS="12"
+                        adjustLabelSpan="false"
+                        emptySpanXL="3"
+                        emptySpanL="3"
+                        emptySpanM="0"
+                        emptySpanS="0"
+                        columnsXL="2"
+                        columnsL="2"
+                        columnsM="2"
+                        singleContainerFullSize="false" />
+                </f:layout>
+                <f:formContainers>
+                    <f:FormContainer>
+                        <f:formElements>
+                            <f:FormElement label="{i18n>nomProducto}">
+                                <f:fields>
+                                    <Input value="{toolsModel>/producSelect/ProductName}"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="{i18n>cantxuni}">
+                                <f:fields>
+                                    <Input value="{toolsModel>/producSelect/QuantityPerUnit}"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="{i18n>precio}">
+                                <f:fields>
+                                    <Input value="{toolsModel>/producSelect/UnitPrice}"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="{i18n>stock}">
+                                <f:fields>
+                                    <Input value="{toolsModel>/producSelect/UnitsInStock}"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="{i18n>uniPedidas}">
+                                <f:fields>
+                                    <Input value="{toolsModel>/producSelect/UnitsOnOrder}"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="{i18n>habilitado}">
+                                <f:fields>
+                                    <Input value="{toolsModel>/producSelect/Discontinued}"/>
+                                </f:fields>
+                            </f:FormElement>
+                        </f:formElements>
+                    </f:FormContainer>
+                </f:formContainers>
+            </f:Form>
+        </Panel>
+        <endButton>
+            <Button text="{i18n>cerrar}" press="closeDialog"></Button>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

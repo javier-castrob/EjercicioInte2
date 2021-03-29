@@ -1,0 +1,49 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form">
+    <Panel >
+        <f:Form>
+			<f:layout>
+				<f:ResponsiveGridLayout
+					labelSpanXL="4"
+					labelSpanL="4"
+					labelSpanM="12"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="3"
+					emptySpanL="3"
+					emptySpanM="0"
+					emptySpanS="0"
+					columnsXL="2"
+					columnsL="2"
+					columnsM="2"
+					singleContainerFullSize="false" />
+			</f:layout>
+			<f:formContainers>
+                <f:FormContainer>
+                    <f:formElements>
+						<f:FormElement label="{i18n>cantxuni}">
+							<f:fields>
+								<Text text="{toolsModel>/producSelect/QuantityPerUnit}"/>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="{i18n>stock}">
+							<f:fields>
+								<Text text="{toolsModel>/producSelect/UnitsInStock}"/>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="{i18n>uniPedidas}">
+							<f:fields>
+								<Text text="{toolsModel>/producSelect/UnitsOnOrder}"/>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="{i18n>habilitado}">
+							<f:fields>
+								<Text text="{path: 'toolsModel>/producSelect/Discontinued',  formatter: '.Formatter.formatEstado'}"/>
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+                </f:FormContainer>
+			</f:formContainers>
+		</f:Form>
+    </Panel>
+</core:FragmentDefinition>
