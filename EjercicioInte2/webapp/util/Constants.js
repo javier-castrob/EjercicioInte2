@@ -12,7 +12,12 @@ sap.ui.define([
             Proveedor: "Proveedor"
         },
         filter: {
-                productName:"ProductName"
+                productName:"ProductName",
+                unitPrice: "UnitPrice",
+                productID: "ProductID",
+                textNombre: "Nombre",
+                textPrecio: "Precio",
+                textId: "ID Producto"
             },
         properties: {
             TOOLS_MODEL: {
@@ -27,7 +32,8 @@ sap.ui.define([
                 copiar: "copiar"
             },
             productos: {
-                inicial: "/value/0"
+                inicial: "/value/0",
+                value: "/value"
             }
         },
         ids: {
@@ -61,7 +67,9 @@ sap.ui.define([
             main: "RouteMain",
             detail: "RouteDetail",
             FRAGMENTS: {
-                dialogEditar: "EjercicioInte2.EjercicioInte2.fragments.dialogEditar"
+                dialogEditar: "EjercicioInte2.EjercicioInte2.fragments.dialogEditar",
+                sort: "EjercicioInte2.EjercicioInte2.fragments.sort",
+                filter: "EjercicioInte2.EjercicioInte2.fragments.filter"
             }
         }
     };

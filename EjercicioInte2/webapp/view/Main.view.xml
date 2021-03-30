@@ -1,11 +1,15 @@
 <mvc:View controllerName="EjercicioInte2.EjercicioInte2.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
     <Page id="page" title="{i18n>titleMaster} ({toolsModel>/cantidad})">
         <subHeader>
-            <OverflowToolbar>
+            <OverflowToolbar layoutData="" >
                 <SearchField liveChange="onSearch" width="100%" />
             </OverflowToolbar>
         </subHeader>
         <content>
+            <HBox justifyContent="End">
+                <Button tooltip="Ordenar" class="sapUiTinyMargin" icon="sap-icon://sort" press="onSort"/>
+                <Button tooltip="Filtrar" class="sapUiTinyMargin" icon="sap-icon://filter" press="onFilter"/>
+            </HBox>
             <List id="idListaProductos" 
                     items="{Productos>/value}"
                     mode="SingleSelectMaster"

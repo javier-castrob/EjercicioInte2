@@ -7,7 +7,7 @@ sap.ui.define([
         /**
         * Converts a jQuery AJAX promise into a mainline promise
         * @param {object} oPromise jQuery Deferred object
-        */
+        */  
         toPromise: function (oPromise) {
             return new Promise(function (resolve, reject) {
                 oPromise.then(() => {
